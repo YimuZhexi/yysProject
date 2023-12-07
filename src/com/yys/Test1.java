@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/test")
-public class Test extends HttpServlet {
+@WebServlet("/test1")
+public class Test1 extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
@@ -39,8 +39,26 @@ public class Test extends HttpServlet {
         //请求跳转
         //request.getRequestDispatcher("url" ).forward(request,response);*/
 
-        resp.addCookie(new Cookie("username","13121"));
-        System.out.println("test");
-        req.getRequestDispatcher("/test1").forward(req,resp);
+        System.out.println("test1");
+        /*
+        //InputStream inputStream = null;
+        byte[] data = null;
+        try {
+            inputStream = new FileInputStream("D:/program/JAVAProgram/YYSProject/web/img/QQ图片20220502182441.png");
+            data = new byte[inputStream.available()];
+            inputStream.read(data);
+            inputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        // BASE64Encoder encoder = new BASE64Encoder();
+        var d = Base64.getEncoder().encodeToString(data);
+
+        resp.getOutputStream().write(d.getBytes());
+        */
+        var c = req.getCookies();
+        for (Cookie cookie :c) {
+            System.out.println(cookie.getName() + cookie.getValue());
+        }
     }
 }
