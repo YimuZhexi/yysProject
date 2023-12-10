@@ -1,5 +1,6 @@
 package com.yys.service.impl;
 
+import com.yys.dao.IShiShenDao;
 import com.yys.entity.ShiShen;
 import com.yys.factory.DaoFactory;
 import com.yys.service.IShiShenService;
@@ -7,6 +8,8 @@ import com.yys.service.IShiShenService;
 import java.util.ArrayList;
 
 public class ShiShenServiceImpl implements IShiShenService {
+    IShiShenDao shiShenDao = DaoFactory.getShiShenDao();
+
     /**
      * 根据名称查询式神
      *
@@ -16,7 +19,7 @@ public class ShiShenServiceImpl implements IShiShenService {
     @Override
     public ShiShen QueryShiShenByName(String name) {
         if (name != null) {
-            return DaoFactory.getShiShenDao().QueryShiShenByName(name);
+            return shiShenDao.QueryShiShenByName(name);
         }
         return null;
     }
@@ -31,8 +34,8 @@ public class ShiShenServiceImpl implements IShiShenService {
     public boolean AddShiShen(ShiShen newData) {
         // 检查待添加的式神对象是否为空以及式神名称是否为空
         if (newData != null && newData.getShiShenName() != null) {
-            // 调用DaoFactory中的ShiShenDao的AddShiShen方法添加式神
-            return DaoFactory.getShiShenDao().AddShiShen(newData);
+            // 调用shiShenDao的AddShiShen方法添加式神
+            return shiShenDao.AddShiShen(newData);
         }
         // 如果式神对象为空或式神名称为空，则返回false
         return false;
@@ -48,7 +51,7 @@ public class ShiShenServiceImpl implements IShiShenService {
     @Override
     public boolean DeleteShiShen(String name) {
         if (name != null) {
-            return DaoFactory.getShiShenDao().DeleteShiShen(name);
+            return shiShenDao.DeleteShiShen(name);
         }
         return false;
     }
@@ -63,8 +66,8 @@ public class ShiShenServiceImpl implements IShiShenService {
     public boolean UpdateShiShen(ShiShen newData) {
         // 检查待更新的式神对象是否为空以及式神名称是否为空
         if (newData != null && newData.getShiShenName() != null) {
-            // 调用DaoFactory中的ShiShenDao的UpdateShiShen方法更新式神
-            return DaoFactory.getShiShenDao().UpdateShiShen(newData);
+            // shiShenDao的UpdateShiShen方法更新式神
+            return shiShenDao.UpdateShiShen(newData);
         }
         // 如果式神对象为空或者式神名称为空，则更新失败，返回false
         return false;
@@ -78,12 +81,7 @@ public class ShiShenServiceImpl implements IShiShenService {
      */
     @Override
     public ArrayList<ShiShen> QueryShiShen() {
-        // 调用 ShiShenDao 的 QueryShiShen 方法查询所有式神
-        if (DaoFactory.getShiShenDao().QueryShiShen() != null) {
-            return DaoFactory.getShiShenDao().QueryShiShen();
-        }
-        // 如果查询结果为空，则返回 null
-        return null;
+        return shiShenDao.QueryShiShen();
     }
 
 }

@@ -1,10 +1,13 @@
 package com.yys.service.impl;
 
+import com.yys.dao.IShiShenZhuanJiDao;
 import com.yys.entity.ShiShenZhuanJi;
 import com.yys.factory.DaoFactory;
 import com.yys.service.IShiShenZhuanJiService;
 
 public class ShiShenZhuanJiServiceImpl implements IShiShenZhuanJiService {
+    IShiShenZhuanJiDao shiShenZhuanJiDao = DaoFactory.getShiShenZhuanJiDao();
+
     /**
      * 更新式神传记
      *
@@ -14,8 +17,7 @@ public class ShiShenZhuanJiServiceImpl implements IShiShenZhuanJiService {
     @Override
     public boolean UpdateShiShenZhuanJi(ShiShenZhuanJi newData) {
         if (newData != null && newData.getShiShenName() != null) {
-            // 调用DaoFactory实例的getShiShenZhuanJiDao方法获取ShiShenZhuanJiDao对象
-            return DaoFactory.getShiShenZhuanJiDao().UpdateShiShenZhuanJi(newData);
+            return shiShenZhuanJiDao.UpdateShiShenZhuanJi(newData);
         }
         return false;
     }
@@ -30,7 +32,7 @@ public class ShiShenZhuanJiServiceImpl implements IShiShenZhuanJiService {
     @Override
     public boolean DeleteShiShenZhuanJiByName(String name) {
         if (name != null) {
-            return DaoFactory.getShiShenZhuanJiDao().DeleteShiShenZhuanJi(name);
+            return shiShenZhuanJiDao.DeleteShiShenZhuanJi(name);
         }
         return false;
     }
@@ -44,7 +46,7 @@ public class ShiShenZhuanJiServiceImpl implements IShiShenZhuanJiService {
     @Override
     public ShiShenZhuanJi QueryShiShenZhuanJi(String name) {
         if (name != null) {
-            return DaoFactory.getShiShenZhuanJiDao().QueryShiShenZhuanJi(name);
+            return shiShenZhuanJiDao.QueryShiShenZhuanJi(name);
         }
         return null;
     }
@@ -58,7 +60,7 @@ public class ShiShenZhuanJiServiceImpl implements IShiShenZhuanJiService {
     @Override
     public boolean AddShiShenZhuanJi(ShiShenZhuanJi newData) {
         if (newData != null && newData.getShiShenName() != null) {
-            return DaoFactory.getShiShenZhuanJiDao().AddShiShenZhuanJi(newData);
+            return shiShenZhuanJiDao.AddShiShenZhuanJi(newData);
         }
         return false;
     }

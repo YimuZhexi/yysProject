@@ -23,11 +23,12 @@ public interface IUserAccountService {
     public boolean DeleteUserAccount(String userName);
 
     /**
-     * 查询用户账户
+     * 登录
      *
-     * @param userName 要查询的用户账户的用户名
-     * @return 如果找到对应用户账户返回UserAccount对象，否则返回null
+     * @param userName 账户的用户名
+     * @param password 账户的密码
+     * @return 密码账户匹配则返回true，否则返回false
      */
-    public UserAccount QueryUserAccount(String userName);
+    public boolean LoginAccount(String userName, String password);
 }
 

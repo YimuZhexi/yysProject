@@ -6,6 +6,8 @@ import com.yys.service.IUserAccountService;
 import com.yys.factory.DaoFactory;
 
 public class UserAccountServiceImpl implements IUserAccountService {
+    IUserAccountDao userAccountDao = DaoFactory.getUserAccountDao();
+
     /**
      * 插入用户账户
      *
@@ -15,8 +17,6 @@ public class UserAccountServiceImpl implements IUserAccountService {
     @Override
     public boolean InsertUserAccount(UserAccount userAccount) {
         if (userAccount != null) {
-            // 获取用户账户数据访问对象
-            IUserAccountDao userAccountDao = DaoFactory.getUserAccountDao();
             if (userAccount.getUsername() != null && userAccount.getPassword() != null && userAccount.getEmail() != null)
                 // 执行插入操作
                 return userAccountDao.InsertUserAccount(userAccount);
@@ -35,8 +35,6 @@ public class UserAccountServiceImpl implements IUserAccountService {
     @Override
     public boolean DeleteUserAccount(String userName) {
         if (userName != null) {
-            // 获取用户账户数据访问对象
-            IUserAccountDao userAccountDao = DaoFactory.getUserAccountDao();
             // 调用数据访问对象的方法删除用户账户
             return userAccountDao.DeleteUserAccount(userName);
         }
@@ -44,23 +42,23 @@ public class UserAccountServiceImpl implements IUserAccountService {
         return false;
     }
 
-
     /**
-     * 查询用户账户
+     * 登录
      *
-     * @param userName 要查询的用户账户的用户名
-     * @return 如果找到对应用户账户返回UserAccount对象，否则返回null
+     * @param userName 账户的用户名
+     * @param password 账户的密码
+     * @return 密码账户匹配则返回true，否则返回false
      */
     @Override
-    public UserAccount QueryUserAccount(String userName) {
-        if (userName != null) {
-            // 获取用户账户数据访问对象
-            IUserAccountDao userAccountDao = DaoFactory.getUserAccountDao();
+    public boolean LoginAccount(String userName, String password) {
+        // 登录账户方法，传入用户名和密码，判断是否登录成功
+        if (userName != null && password != null) {
             // 调用用户账户数据访问对象的方法查询用户账户
-            return userAccountDao.QueryUserAccount(userName);
+            UserAccount data = userAccountDao.QueryUserAccount(userName);
+            return data.getPassword().equals(password);
         }
-        // 如果用户名为空，则返回null
-        return null;
+        return false;
     }
+
 
 }

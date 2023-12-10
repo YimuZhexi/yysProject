@@ -1,10 +1,13 @@
 package com.yys.service.impl;
 
+import com.yys.dao.IShiShenSkillDao;
 import com.yys.entity.ShiShenSkill;
 import com.yys.factory.DaoFactory;
 import com.yys.service.IShiShenSkillService;
 
 public class ShiShenSkillServiceImpl implements IShiShenSkillService {
+    IShiShenSkillDao shiShenSkillDao = DaoFactory.getShiShenSkillDao();
+
     /**
      * 添加式神技能
      *
@@ -16,7 +19,7 @@ public class ShiShenSkillServiceImpl implements IShiShenSkillService {
         // 检查参数是否为空，以及式神名称是否为空
         if (shiShenSkill != null && shiShenSkill.getShiShenName() != null) {
             // 调用式神技能数据访问对象的添加式神技能方法
-            return DaoFactory.getShiShenSkillDao().AddShiShenSkill(shiShenSkill);
+            return shiShenSkillDao.AddShiShenSkill(shiShenSkill);
         }
         // 如果参数为空或式神名称为空，返回false
         return false;
@@ -35,7 +38,7 @@ public class ShiShenSkillServiceImpl implements IShiShenSkillService {
         if (shiShenSkill != null && shiShenSkill.getShiShenName() != null) {
             // 调用DaoFactory的getShiShenSkillDao方法获取式神技能Dao对象
             // 调用式神技能Dao对象的UpdateShiShenSkill方法更新式神技能
-            return DaoFactory.getShiShenSkillDao().UpdateShiShenSkill(shiShenSkill);
+            return shiShenSkillDao.UpdateShiShenSkill(shiShenSkill);
         }
         // 参数无效，返回false
         return false;
@@ -51,7 +54,7 @@ public class ShiShenSkillServiceImpl implements IShiShenSkillService {
     @Override
     public boolean DeleteShiShenSkillByName(String name) {
         if (name != null) {
-            return DaoFactory.getShiShenSkillDao().DeleteShiShenSkill(name);
+            return shiShenSkillDao.DeleteShiShenSkill(name);
         }
         return false;
     }
@@ -65,7 +68,7 @@ public class ShiShenSkillServiceImpl implements IShiShenSkillService {
     @Override
     public ShiShenSkill QueryShiShenSkill(String name) {
         if (name != null) {
-            return DaoFactory.getShiShenSkillDao().QueryShiShenSkill(name);
+            return shiShenSkillDao.QueryShiShenSkill(name);
         }
         return null;
     }
