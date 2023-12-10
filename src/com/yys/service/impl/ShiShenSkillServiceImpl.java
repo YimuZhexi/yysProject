@@ -5,6 +5,9 @@ import com.yys.entity.ShiShenSkill;
 import com.yys.factory.DaoFactory;
 import com.yys.service.IShiShenSkillService;
 
+/**
+ * 式神技能业务逻辑实现类
+ */
 public class ShiShenSkillServiceImpl implements IShiShenSkillService {
     IShiShenSkillDao shiShenSkillDao = DaoFactory.getShiShenSkillDao();
 

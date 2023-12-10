@@ -5,6 +5,9 @@ import com.yys.entity.UserAccount;
 import com.yys.service.IUserAccountService;
 import com.yys.factory.DaoFactory;
 
+/**
+ * 用户账户服务实现类
+ */
 public class UserAccountServiceImpl implements IUserAccountService {
     IUserAccountDao userAccountDao = DaoFactory.getUserAccountDao();
 
@@ -59,6 +62,4 @@ public class UserAccountServiceImpl implements IUserAccountService {
         }
         return false;
     }
-
-
 }

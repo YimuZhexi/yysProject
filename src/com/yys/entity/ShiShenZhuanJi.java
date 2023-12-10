@@ -13,11 +13,10 @@ public class ShiShenZhuanJi {
     }
 
     /**
-     *
      * @param shiShenName 式神名
-     * @param zhuanJi1 传记1
-     * @param zhuanJi2 传记2
-     * @param zhuanJi3 传记3
+     * @param zhuanJi1    传记1
+     * @param zhuanJi2    传记2
+     * @param zhuanJi3    传记3
      */
     public ShiShenZhuanJi(String shiShenName, String zhuanJi1, String zhuanJi2, String zhuanJi3) {
         this.shiShenName = shiShenName;
@@ -27,7 +26,6 @@ public class ShiShenZhuanJi {
     }
 
     /**
-     *
      * @return 式神名
      */
     public String getShiShenName() {
@@ -35,7 +33,6 @@ public class ShiShenZhuanJi {
     }
 
     /**
-     *
      * @param shiShenName 式神名
      */
     public void setShiShenName(String shiShenName) {
@@ -43,7 +40,6 @@ public class ShiShenZhuanJi {
     }
 
     /**
-     *
      * @return 传记1
      */
     public String getZhuanJi1() {
@@ -51,7 +47,6 @@ public class ShiShenZhuanJi {
     }
 
     /**
-     *
      * @param zhuanJi1 传记1
      */
     public void setZhuanJi1(String zhuanJi1) {
@@ -59,7 +54,6 @@ public class ShiShenZhuanJi {
     }
 
     /**
-     *
      * @return 传记2
      */
     public String getZhuanJi2() {
@@ -67,7 +61,6 @@ public class ShiShenZhuanJi {
     }
 
     /**
-     *
      * @param zhuanJi2 传记2
      */
     public void setZhuanJi2(String zhuanJi2) {
@@ -75,7 +68,6 @@ public class ShiShenZhuanJi {
     }
 
     /**
-     *
      * @return 传记3
      */
     public String getZhuanJi3() {
@@ -83,7 +75,6 @@ public class ShiShenZhuanJi {
     }
 
     /**
-     *
      * @param zhuanJi3 传记3
      */
     public void setZhuanJi3(String zhuanJi3) {

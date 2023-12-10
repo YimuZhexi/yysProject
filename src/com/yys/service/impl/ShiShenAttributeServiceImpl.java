@@ -7,6 +7,9 @@ import com.yys.service.IShiShenAttributeService;
 
 import java.util.ArrayList;
 
+/**
+ * 式神属性业务逻辑实现类
+ */
 public class ShiShenAttributeServiceImpl implements IShiShenAttributeService {
     IShiShenAttributeDao shiShenAttributeDao = DaoFactory.getShiShenAttributeDao();
 
@@ -24,7 +27,6 @@ public class ShiShenAttributeServiceImpl implements IShiShenAttributeService {
         // 如果传入参数无效，则返回false
         return false;
     }
-
 
 
     /**

@@ -12,10 +12,9 @@ public class ShiShen {
     }
 
     /**
-     *
-     * @param shiShenName 式神名
+     * @param shiShenName     式神名
      * @param jueXingQianIcon 式神觉醒前图标
-     * @param jueXingHouIcon 式神觉醒后图标
+     * @param jueXingHouIcon  式神觉醒后图标
      */
     public ShiShen(String shiShenName, byte[] jueXingQianIcon, byte[] jueXingHouIcon) {
         this.shiShenName = shiShenName;
@@ -24,7 +23,6 @@ public class ShiShen {
     }
 
     /**
-     *
      * @return 式神名
      */
     public String getShiShenName() {
@@ -32,7 +30,6 @@ public class ShiShen {
     }
 
     /**
-     *
      * @param shiShenName 式神名
      */
     public void setShiShenName(String shiShenName) {
@@ -40,7 +37,6 @@ public class ShiShen {
     }
 
     /**
-     *
      * @return 式神觉醒前图标
      */
     public byte[] getJueXingQianIcon() {
@@ -48,7 +44,6 @@ public class ShiShen {
     }
 
     /**
-     *
      * @param jueXingQianIcon 式神觉醒前图标
      */
     public void setJueXingQianIcon(byte[] jueXingQianIcon) {
@@ -56,7 +51,6 @@ public class ShiShen {
     }
 
     /**
-     *
      * @return 式神觉醒后图标
      */
     public byte[] getJueXingHouIcon() {
@@ -64,7 +58,6 @@ public class ShiShen {
     }
 
     /**
-     *
      * @param jueXingHouIcon 式神觉醒后图标
      */
     public void setJueXingHouIcon(byte[] jueXingHouIcon) {

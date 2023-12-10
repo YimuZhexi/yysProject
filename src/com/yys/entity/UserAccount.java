@@ -12,10 +12,9 @@ public class UserAccount {
     }
 
     /**
-     *
      * @param username 账户名
      * @param password 账户密码
-     * @param email 邮箱
+     * @param email    邮箱
      */
     public UserAccount(String username, String password, String email) {
         this.username = username;
@@ -24,7 +23,6 @@ public class UserAccount {
     }
 
     /**
-     *
      * @return 账户名
      */
     public String getUsername() {
@@ -32,7 +30,6 @@ public class UserAccount {
     }
 
     /**
-     *
      * @param username 账户名
      */
     public void setUsername(String username) {
@@ -40,7 +37,6 @@ public class UserAccount {
     }
 
     /**
-     *
      * @return 密码
      */
     public String getPassword() {
@@ -48,7 +44,6 @@ public class UserAccount {
     }
 
     /**
-     *
      * @param password 密码
      */
     public void setPassword(String password) {
@@ -56,7 +51,6 @@ public class UserAccount {
     }
 
     /**
-     *
      * @return 邮箱
      */
     public String getEmail() {
@@ -64,7 +58,6 @@ public class UserAccount {
     }
 
     /**
-     *
      * @param email 邮箱
      */
     public void setEmail(String email) {

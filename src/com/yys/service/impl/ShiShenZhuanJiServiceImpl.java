@@ -5,6 +5,9 @@ import com.yys.entity.ShiShenZhuanJi;
 import com.yys.factory.DaoFactory;
 import com.yys.service.IShiShenZhuanJiService;
 
+/**
+ * 式神传记服务实现类
+ */
 public class ShiShenZhuanJiServiceImpl implements IShiShenZhuanJiService {
     IShiShenZhuanJiDao shiShenZhuanJiDao = DaoFactory.getShiShenZhuanJiDao();
 

@@ -7,6 +7,9 @@ import com.yys.service.IShiShenService;
 
 import java.util.ArrayList;
 
+/**
+ * 式神业务逻辑实现类
+ */
 public class ShiShenServiceImpl implements IShiShenService {
     IShiShenDao shiShenDao = DaoFactory.getShiShenDao();
 
