@@ -15,7 +15,7 @@ public interface IShiShenZhuanJiDao {
      * @param shiShenZhuanJi 要插入的式神传记对象
      * @return 插入成功返回true，否则返回false
      */
-    boolean InsertShiShenZhuanJi(ShiShenZhuanJi shiShenZhuanJi);
+    boolean AddShiShenZhuanJi(ShiShenZhuanJi shiShenZhuanJi);
 
     /**
      * 更新式神传记

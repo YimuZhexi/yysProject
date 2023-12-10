@@ -60,7 +60,7 @@ public class ShiShenZhuanJiDaoImpl implements IShiShenZhuanJiDao {
      * @return 插入成功返回true，否则返回false
      */
     @Override
-    public boolean InsertShiShenZhuanJi(ShiShenZhuanJi shiShenZhuanJi) {
+    public boolean AddShiShenZhuanJi(ShiShenZhuanJi shiShenZhuanJi) {
         boolean flag = false;
         PreparedStatement ps = null;
         String sql = "insert into shishenzhuanji values(?,?,?,?)";

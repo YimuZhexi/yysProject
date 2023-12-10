@@ -15,7 +15,7 @@ public interface IShiShenSkillDao {
      * @param shiShenSkill 技能
      * @return 是否成功
      */
-    boolean InsertShiShenSkill(ShiShenSkill shiShenSkill);
+    boolean AddShiShenSkill(ShiShenSkill shiShenSkill);
 
     /**
      * 修改技能

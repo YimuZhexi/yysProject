@@ -68,7 +68,7 @@ public class ShiShenSkillDaoImpl implements IShiShenSkillDao {
      * @return 是否成功
      */
     @Override
-    public boolean InsertShiShenSkill(ShiShenSkill shiShenSkill) {
+    public boolean AddShiShenSkill(ShiShenSkill shiShenSkill) {
         boolean flag = false;  // 定义一个布尔变量flag并初始化为false
         PreparedStatement preparedStatement = null;  // 定义一个PreparedStatement对象preparedStatement并初始化为null
         String sql = "insert into shishenskill values(?,?,?,?,?,?,?,?,?,?)";  // 定义一个字符串变量sql并初始化为插入语句
