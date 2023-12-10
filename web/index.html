@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script type="text/javascript" src="js/test.js"></script>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>登陆界面</title>
+    <link rel="stylesheet" href="css/login.css" type="text/css">
+    <script type="text/javascript" src="js/login.js"></script>
 </head>
 <body>
-<h1>hello word</h1>
-<button onclick="test()">12333</button>
-<div id="out">
-    <form action="/" method="post" enctype="multipart/form-data">
-        <div><input type="file" multiple="multiple" accept="image/*" name="image"></div>
-        <div><input type="submit" value="上传"></div>
-    </form>
+<div class="background"></div>
+<div>
+    <div class="header"></div>
+    <div class="text">
+        123456
+    </div>
+    <div class="container">
+        <h2>登陆</h2>
+        <form>
+            <label>
+                <input type="text" id="username" name="username" placeholder="用户名" required>
+                <input type="password" id="password" name="password" placeholder="密码" required>
+                <input type="button" value="登录" onclick="login()">
+            </label>
+        </form>
+    </div>
 </div>
 </body>
 </html>

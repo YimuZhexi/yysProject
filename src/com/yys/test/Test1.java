@@ -1,4 +1,4 @@
-package com.yys;
+package com.yys.test;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
