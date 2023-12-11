@@ -11,7 +11,7 @@ public interface IShiShenDao {
      * @param name 查询式神名
      * @return 信息
      */
-    ShiShen QueryShiShenByName(String name);
+    ArrayList<ShiShen> QueryShiShenByName(String name);
 
     /**
      * 查询所有式神信息

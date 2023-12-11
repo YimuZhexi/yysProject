@@ -5,6 +5,8 @@ import com.yys.entity.UserAccount;
 import com.yys.service.IUserAccountService;
 import com.yys.factory.DaoFactory;
 
+import java.util.Objects;
+
 /**
  * 用户账户服务实现类
  */
@@ -18,14 +20,15 @@ public class UserAccountServiceImpl implements IUserAccountService {
      * @return 如果插入成功返回true，否则返回false
      */
     @Override
-    public boolean InsertUserAccount(UserAccount userAccount) {
-        if (userAccount != null) {
-            if (userAccount.getUsername() != null && userAccount.getPassword() != null && userAccount.getEmail() != null)
-                // 执行插入操作
-                return userAccountDao.InsertUserAccount(userAccount);
-        }
-        // 如果用户账户为空，则返回false
-        return false;
+    public String InsertUserAccount(UserAccount userAccount) {
+        if (Objects.equals(userAccount.getUsername(), "")) return "请输入用户名";
+        else if (Objects.equals(userAccount.getPassword(), "")) return "请输入密码";
+        else if (Objects.equals(userAccount.getEmail(), "")) return "请输入邮箱";
+        if (userAccountDao.QueryUserAccount(userAccount.getUsername()) != null) return "用户名已存在";
+        // 执行插入操作
+        if (userAccountDao.InsertUserAccount(userAccount))
+            return "注册成功";
+        return "注册失败";
     }
 
 
@@ -58,7 +61,8 @@ public class UserAccountServiceImpl implements IUserAccountService {
         if (userName != null && password != null) {
             // 调用用户账户数据访问对象的方法查询用户账户
             UserAccount data = userAccountDao.QueryUserAccount(userName);
-            return data.getPassword().equals(password);
+            if (data != null)
+                return data.getPassword().equals(password);
         }
         return false;
     }

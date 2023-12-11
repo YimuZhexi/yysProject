@@ -25,29 +25,30 @@ public class ShiShenDaoImpl implements IShiShenDao {
      * @return 信息
      */
     @Override
-    public ShiShen QueryShiShenByName(String name) {
-        ShiShen ret =null;
-        PreparedStatement preparedStatement=null;
-        ResultSet resultSet=null;
-        String sql="select * from shishen where shiShenName=?";
+    public ArrayList<ShiShen> QueryShiShenByName(String name) {
+        ArrayList<ShiShen> ret = new ArrayList<>();
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        String sql = "select * from shishen where shiShenName like ?";
         try {
-            preparedStatement =  connection.prepareStatement(sql);
-            preparedStatement.setString(1,name);
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, name);
             resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()){
-                ret=new ShiShen(
+            while (resultSet.next()) {
+                ShiShen s = new ShiShen(
                         resultSet.getString("shiShenName"),
-                        resultSet.getBytes("jueXingQianIcon"),
-                        resultSet.getBytes("jueXingHouIcon")
+                        resultSet.getString("jueXingQianIcon"),
+                        resultSet.getString("jueXingHouIcon")
                 );
+                ret.add(s);
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             try {
-                if (preparedStatement!= null)preparedStatement.close();
-                if (resultSet!= null)resultSet.close();
-            }catch (Exception e){
+                if (preparedStatement != null) preparedStatement.close();
+                if (resultSet != null) resultSet.close();
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
@@ -61,27 +62,27 @@ public class ShiShenDaoImpl implements IShiShenDao {
      */
     @Override
     public ArrayList<ShiShen> QueryShiShen() {
-        ArrayList<ShiShen> ret=new ArrayList<>();
-        PreparedStatement preparedStatement=null;
-        ResultSet resultSet=null;
-        String sql="select * from shishen";
+        ArrayList<ShiShen> ret = new ArrayList<>();
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        String sql = "select * from shishen";
         try {
-            preparedStatement =  connection.prepareStatement(sql);
+            preparedStatement = connection.prepareStatement(sql);
             resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 ret.add(new ShiShen(
                         resultSet.getString("shiShenName"),
-                        resultSet.getBytes("jueXingQianIcon"),
-                        resultSet.getBytes("jueXingHouIcon")
+                        resultSet.getString("jueXingQianIcon"),
+                        resultSet.getString("jueXingHouIcon")
                 ));
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             try {
-                if (preparedStatement!= null)preparedStatement.close();
-                if (resultSet!= null)resultSet.close();
-            }catch (Exception e){
+                if (preparedStatement != null) preparedStatement.close();
+                if (resultSet != null) resultSet.close();
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
@@ -96,24 +97,23 @@ public class ShiShenDaoImpl implements IShiShenDao {
      */
     @Override
     public boolean AddShiShen(ShiShen newData) {
-        boolean flag =false;
-        PreparedStatement preparedStatement=null;
-        String sql="insert into shishen values(?,?,?)";
+        boolean flag = false;
+        PreparedStatement preparedStatement = null;
+        String sql = "insert into shishen values(?,?,?)";
         try {
             preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1,newData.getShiShenName());
-            preparedStatement.setBytes(2,newData.getJueXingQianIcon());
-            preparedStatement.setBytes(3,newData.getJueXingHouIcon());
+            preparedStatement.setString(1, newData.getShiShenName());
+            preparedStatement.setString(2, newData.getJueXingQianIcon());
+            preparedStatement.setString(3, newData.getJueXingHouIcon());
             if (preparedStatement.executeUpdate() > 0) {
                 flag = true;
             }
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             try {
-                if (preparedStatement!= null)preparedStatement.close();
-            }catch (Exception e){
+                if (preparedStatement != null) preparedStatement.close();
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
@@ -133,7 +133,7 @@ public class ShiShenDaoImpl implements IShiShenDao {
         String sql = "delete from shishen where shiShenName=?";
         try {
             preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1,name);
+            preparedStatement.setString(1, name);
             if (preparedStatement.executeUpdate() > 0) {
                 flag = true;
             }
@@ -161,11 +161,11 @@ public class ShiShenDaoImpl implements IShiShenDao {
         PreparedStatement preparedStatement = null;
         String sql = "update shishen set shiShenName=?,jueXingQianIcon=?,jueXingHouIcon=? where shiShenName=?";
         try {
-            preparedStatement= connection.prepareStatement(sql);
-            preparedStatement.setString(1,newData.getShiShenName());
-            preparedStatement.setBytes(2,newData.getJueXingQianIcon());
-            preparedStatement.setBytes(3,newData.getJueXingHouIcon());
-            preparedStatement.setString(4,newData.getShiShenName());
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, newData.getShiShenName());
+            preparedStatement.setString(2, newData.getJueXingQianIcon());
+            preparedStatement.setString(3, newData.getJueXingHouIcon());
+            preparedStatement.setString(4, newData.getShiShenName());
             if (preparedStatement.executeUpdate() > 0) {
                 flag = true;
             }
@@ -178,6 +178,6 @@ public class ShiShenDaoImpl implements IShiShenDao {
                 e.printStackTrace();
             }
         }
-            return flag;
+        return flag;
     }
 }

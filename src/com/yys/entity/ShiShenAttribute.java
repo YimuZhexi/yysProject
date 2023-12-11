@@ -14,12 +14,12 @@ public class ShiShenAttribute {
     private float baoJiShangHai;
     private float xiaoGuoMingZhong;
     private float xiaoGuoDiKang;
-    private byte[] image;
+    private String image;
 
     public ShiShenAttribute() {
     }
 
-    public ShiShenAttribute(String shiShenName, String zhuangTai, int gongJi, int shengMing, int fangYu, int suDu, float baoJi, float baoJiShangHai, float xiaoGuoMingZhong, float xiaoGuoDiKang, byte[] image) {
+    public ShiShenAttribute(String shiShenName, String zhuangTai, int gongJi, int shengMing, int fangYu, int suDu, float baoJi, float baoJiShangHai, float xiaoGuoMingZhong, float xiaoGuoDiKang, String image) {
         this.shiShenName = shiShenName;
         this.zhuangTai = zhuangTai;
         this.gongJi = gongJi;
@@ -113,11 +113,11 @@ public class ShiShenAttribute {
         this.xiaoGuoDiKang = xiaoGuoDiKang;
     }
 
-    public byte[] getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(byte[] image) {
+    public void setImage(String image) {
         this.image = image;
     }
 }

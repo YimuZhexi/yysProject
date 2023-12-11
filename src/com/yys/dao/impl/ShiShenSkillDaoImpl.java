@@ -38,13 +38,13 @@ public class ShiShenSkillDaoImpl implements IShiShenSkillDao {
                 shiShenSkill = new ShiShenSkill();  // 创建一个新的ShiShenSkill对象
                 shiShenSkill.setShiShenName(resultSet.getString("shishenname"));  // 将结果集中的shishenname列的值赋给shiShenSkill的shishenname属性
                 shiShenSkill.setSkill1(resultSet.getString("skill1"));  // 将结果集中的skill1列的值赋给shiShenSkill的skill1属性
-                shiShenSkill.setSkillIcon1(resultSet.getBytes("skillIcon1"));  // 将结果集中的skillIcon1列的值赋给shiShenSkill的skillIcon1属性
+                shiShenSkill.setSkillIcon1(resultSet.getString("skillIcon1"));  // 将结果集中的skillIcon1列的值赋给shiShenSkill的skillIcon1属性
                 shiShenSkill.setSkillDescription1(resultSet.getString("skillDescription1"));  // 将结果集中的skillDescription1列的值赋给shiShenSkill的skillDescription1属性
                 shiShenSkill.setSkill2(resultSet.getString("skill2"));  // 将结果集中的skill2列的值赋给shiShenSkill的skill2属性
-                shiShenSkill.setSkillIcon2(resultSet.getBytes("skillIcon2"));  // 将结果集中的skillIcon2列的值赋给shiShenSkill的skillIcon2属性
+                shiShenSkill.setSkillIcon2(resultSet.getString("skillIcon2"));  // 将结果集中的skillIcon2列的值赋给shiShenSkill的skillIcon2属性
                 shiShenSkill.setSkillDescription2(resultSet.getString("skillDescription2"));  // 将结果集中的skillDescription2列的值赋给shiShenSkill的skillDescription2属性
                 shiShenSkill.setSkill3(resultSet.getString("skill3"));  // 将结果集中的skill3列的值赋给shiShenSkill的skill3属性
-                shiShenSkill.setSkillIcon3(resultSet.getBytes("skillIcon3"));  // 将结果集中的skillIcon3列的值赋给shiShenSkill的skillIcon3属性
+                shiShenSkill.setSkillIcon3(resultSet.getString("skillIcon3"));  // 将结果集中的skillIcon3列的值赋给shiShenSkill的skillIcon3属性
                 shiShenSkill.setSkillDescription3(resultSet.getString("skillDescription3"));  // 将结果集中的skillDescription3列的值赋给shiShenSkill的skillDescription3属性
             }
         } catch (Exception e) {
@@ -76,13 +76,13 @@ public class ShiShenSkillDaoImpl implements IShiShenSkillDao {
             preparedStatement = connection.prepareStatement(sql);  // 用连接对象connection的prepareStatement方法创建一个PreparedStatement对象并赋值给preparedStatement
             preparedStatement.setString(1, shiShenSkill.getShiShenName());  // 调用preparedStatement的setString方法并传入参数1和shiShenSkill对象的shiShenName属性值
             preparedStatement.setString(2, shiShenSkill.getSkill1());  // 调用preparedStatement的setString方法并传入参数2和shiShenSkill对象的skill1属性值
-            preparedStatement.setBytes(3, shiShenSkill.getSkillIcon1());  // 调用preparedStatement的setBytes方法并传入参数3和shiShenSkill对象的skillIcon1属性值
+            preparedStatement.setString(3, shiShenSkill.getSkillIcon1());  // 调用preparedStatement的setBytes方法并传入参数3和shiShenSkill对象的skillIcon1属性值
             preparedStatement.setString(4, shiShenSkill.getSkillDescription1());  // 调用preparedStatement的setString方法并传入参数4和shiShenSkill对象的skillDescription1属性值
             preparedStatement.setString(5, shiShenSkill.getSkill2());  // 调用preparedStatement的setString方法并传入参数5和shiShenSkill对象的skill2属性值
-            preparedStatement.setBytes(6, shiShenSkill.getSkillIcon2());  // 调用preparedStatement的setBytes方法并传入参数6和shiShenSkill对象的skillIcon2属性值
+            preparedStatement.setString(6, shiShenSkill.getSkillIcon2());  // 调用preparedStatement的setBytes方法并传入参数6和shiShenSkill对象的skillIcon2属性值
             preparedStatement.setString(7, shiShenSkill.getSkillDescription2());  // 调用preparedStatement的setString方法并传入参数7和shiShenSkill对象的skillDescription2属性值
             preparedStatement.setString(8, shiShenSkill.getSkill3());  // 调用preparedStatement的setString方法并传入参数8和shiShenSkill对象的skill3属性值
-            preparedStatement.setBytes(9, shiShenSkill.getSkillIcon3());  // 调用preparedStatement的setBytes方法并传入参数9和shiShenSkill对象的skillIcon3属性值
+            preparedStatement.setString(9, shiShenSkill.getSkillIcon3());  // 调用preparedStatement的setBytes方法并传入参数9和shiShenSkill对象的skillIcon3属性值
             preparedStatement.setString(10, shiShenSkill.getSkillDescription3());  // 调用preparedStatement的setString方法并传入参数10和shiShenSkill对象的skillDescription3属性值
             if (preparedStatement.executeUpdate() > 0) {  // 调用preparedStatement的updateQuery方法执行SQL语句并判断返回的更新行数是否大于0
                 flag = true;  // 如果更新行数大于0，则将flag赋值为true
@@ -119,13 +119,13 @@ public class ShiShenSkillDaoImpl implements IShiShenSkillDao {
             // 准备SQL语句并使用参数替换占位符
             preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, shiShenSkill.getSkill1()); // 设置技能1
-            preparedStatement.setBytes(2, shiShenSkill.getSkillIcon1()); // 设置技能1图标
+            preparedStatement.setString(2, shiShenSkill.getSkillIcon1()); // 设置技能1图标
             preparedStatement.setString(3, shiShenSkill.getSkillDescription1()); // 设置技能1描述
             preparedStatement.setString(4, shiShenSkill.getSkill2()); // 设置技能2
-            preparedStatement.setBytes(5, shiShenSkill.getSkillIcon2()); // 设置技能2图标
+            preparedStatement.setString(5, shiShenSkill.getSkillIcon2()); // 设置技能2图标
             preparedStatement.setString(6, shiShenSkill.getSkillDescription2()); // 设置技能2描述
             preparedStatement.setString(7, shiShenSkill.getSkill3()); // 设置技能3
-            preparedStatement.setBytes(8, shiShenSkill.getSkillIcon3()); // 设置技能3图标
+            preparedStatement.setString(8, shiShenSkill.getSkillIcon3()); // 设置技能3图标
             preparedStatement.setString(9, shiShenSkill.getSkillDescription3()); // 设置技能3描述
             preparedStatement.setString(10, shiShenSkill.getShiShenName()); // 设置式神名
             // 执行SQL语句并返回更新的行数

@@ -1,12 +1,12 @@
 function test() {
     var httpRequest = new XMLHttpRequest();
-    httpRequest.open('POST', '/YYS/test', true);
+    httpRequest.open('POST', '/test', true);
     console.log(httpRequest.responseURL.toString());
     httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     httpRequest.send("username=12333");
 
     httpRequest.onreadystatechange = function () {
-        if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+        if (httpRequest.readyState === 4 && httpRequest.status === 200) {
             var json = httpRequest.responseText;
 
             //读取图片
@@ -40,6 +40,23 @@ function test() {
              var p = document.getElementById("out");
              p.appendChild(e);
              console.log("js" + json);*/
+        }
+    }
+}
+
+function getList() {
+    let httpRequest = new XMLHttpRequest(); // 创建一个XMLHttpRequest对象
+    httpRequest.open('POST', '/ShiShen', true); // 设置请求方法、URL和是否异步
+    console.log(httpRequest.responseURL.toString()); // 打印请求的响应URL到控制台
+    httpRequest.setRequestHeader("Content-type", "application/json"); // 设置请求头的Content-type为application/json
+    let json = JSON.stringify({ // 将JSON对象转换为字符串
+        caozuo: "getList"
+    });
+    httpRequest.send(json); // 发送请求
+    httpRequest.onreadystatechange = function () { // 设置一个onreadystatechange事件处理函数
+        if (httpRequest.readyState === 4 && httpRequest.status === 200) { // 如果请求完成且状态码为200
+            let response = httpRequest.responseText; // 获取响应的文本内容
+            console.log(response); // 打印响应到控制台
         }
     }
 }

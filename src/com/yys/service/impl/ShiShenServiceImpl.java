@@ -6,6 +6,7 @@ import com.yys.factory.DaoFactory;
 import com.yys.service.IShiShenService;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 /**
  * 式神业务逻辑实现类
@@ -20,9 +21,12 @@ public class ShiShenServiceImpl implements IShiShenService {
      * @return 对应的式神对象
      */
     @Override
-    public ShiShen QueryShiShenByName(String name) {
+    public ArrayList<ShiShen> QueryShiShenByName(String name) {
         if (name != null) {
-            return shiShenDao.QueryShiShenByName(name);
+            ArrayList<ShiShen> list = shiShenDao.QueryShiShenByName("%" + name + "%");
+            if (list == null) return null;
+            HashSet<ShiShen> hashSet = new HashSet<>(list);
+            return new ArrayList<>(hashSet);
         }
         return null;
     }

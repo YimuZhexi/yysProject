@@ -3,19 +3,19 @@ package com.yys.entity;
 public class ShiShenSkill {
     private String shiShenName;
     private String skill1;
-    private byte[] skillIcon1;
+    private String skillIcon1;
     private String skillDescription1;
     private String skill2;
-    private byte[] skillIcon2;
+    private String skillIcon2;
     private String skillDescription2;
     private String skill3;
-    private byte[] skillIcon3;
+    private String skillIcon3;
     private String skillDescription3;
 
     public ShiShenSkill() {
     }
 
-    public ShiShenSkill(String shiShenName, String skill1, byte[] skillIcon1, String skillDescription1, String skill2, byte[] skillIcon12, String skillDescription2, String skill3, byte[] skillIcon13, String skillDescription3) {
+    public ShiShenSkill(String shiShenName, String skill1, String skillIcon1, String skillDescription1, String skill2, String skillIcon12, String skillDescription2, String skill3, String skillIcon13, String skillDescription3) {
         this.shiShenName = shiShenName;
         this.skill1 = skill1;
         this.skillIcon1 = skillIcon1;
@@ -44,11 +44,11 @@ public class ShiShenSkill {
         this.skill1 = skill1;
     }
 
-    public byte[] getSkillIcon1() {
+    public String getSkillIcon1() {
         return skillIcon1;
     }
 
-    public void setSkillIcon1(byte[] skillIcon1) {
+    public void setSkillIcon1(String skillIcon1) {
         this.skillIcon1 = skillIcon1;
     }
 
@@ -68,11 +68,11 @@ public class ShiShenSkill {
         this.skill2 = skill2;
     }
 
-    public byte[] getSkillIcon2() {
+    public String getSkillIcon2() {
         return skillIcon2;
     }
 
-    public void setSkillIcon2(byte[] skillIcon2) {
+    public void setSkillIcon2(String skillIcon2) {
         this.skillIcon2 = skillIcon2;
     }
 
@@ -92,11 +92,11 @@ public class ShiShenSkill {
         this.skill3 = skill3;
     }
 
-    public byte[] getSkillIcon3() {
+    public String getSkillIcon3() {
         return skillIcon3;
     }
 
-    public void setSkillIcon3(byte[] skillIcon3) {
+    public void setSkillIcon3(String skillIcon3) {
         this.skillIcon3 = skillIcon3;
     }
 

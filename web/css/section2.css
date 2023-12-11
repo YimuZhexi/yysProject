@@ -1,0 +1,351 @@
+#section2 {
+    width: 100%;
+    background: #f1efe9;
+    padding-top: 90px;
+    padding-bottom: 48px
+}
+
+.qingbao_container {
+    position: relative;
+    width: 1170px;
+    height: 585px;
+    background: url("/image/sec2_bg_cafc6ce.png") 0 0 no-repeat
+}
+
+.qingbao_container .data_title {
+    width: 448px;
+    height: 160px;
+    position: absolute;
+    right: 157px;
+    top: -64px
+}
+
+.qingbao_container .data_title .title {
+    float: left
+}
+
+.qingbao_container .data_title .title.before_title {
+    margin-right: 222px
+}
+
+.qingbao_container .data_title .title h3 {
+    color: #000;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center
+}
+
+.qingbao_container .data_title .title .pic_wrap {
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #333
+}
+
+.qingbao_container .data_title .title .pic_wrap img {
+    width: 90px;
+    height: 90px;
+    display: block
+}
+
+.data_list {
+    padding-top: 104px;
+    margin-left: 340px;
+    margin-bottom: 25px
+}
+
+.data_list li {
+    float: left
+}
+
+.data_list .data_name, .data_list .init_state, .data_list .wakeup_state {
+    border-bottom: 1px dashed #999
+}
+
+.data_list .data_name {
+    width: 135px;
+    height: 38px;
+    margin-right: 55px
+}
+
+.data_list .data_name em {
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-right: 23px;
+    margin-top: 12px;
+    background-repeat: no-repeat;
+}
+
+.data_list .data_name em.speed {
+    width: 18px;
+    height: 15px;
+    background-repeat: no-repeat;
+    background-position: -737px -428px
+}
+
+.data_list .data_name em.defence {
+    width: 21px;
+    height: 20px;
+    margin-top: 9px;
+    background-repeat: no-repeat;
+    background-position: -664px -428px
+}
+
+.data_list .data_name em.life {
+    width: 20px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-position: -685px -428px
+}
+
+.data_list .data_name em.attack {
+    width: 17px;
+    height: 14px;
+    background-repeat: no-repeat;
+    background-position: -705px -428px
+}
+
+.data_list .data_name em.opposite {
+    background-repeat: no-repeat;
+    background-position: -721px -428px
+}
+
+.data_list .data_name em.mingzhong {
+    width: 15px;
+    height: 14px;
+    background-repeat: no-repeat;
+    background-position: -755px -428px
+}
+
+/*.data_list .data_name em.g {
+    width: 19px;
+    height: 14px;
+    background-image: url(../img/_icon_g.png?__sprite)
+}*/
+
+.data_list .data_name span {
+    float: left;
+    line-height: 38px;
+    color: #000;
+    font-size: 14px
+}
+
+.data_list .init_state {
+    width: 206px;
+    line-height: 38px;
+    color: #000;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 8px;
+    height: 30px;
+    margin-right: 136px
+}
+
+.data_list .init_state .level {
+    float: left;
+    margin-left: 50px;
+    margin-right: 5px
+}
+
+.data_list .init_state .value {
+    float: left;
+    height: 22px;
+    line-height: 22px
+}
+
+.data_list .wakeup_state {
+    width: 204px;
+    height: 30px;
+    padding-top: 8px
+}
+
+.data_list .wakeup_state .value {
+    width: 76px;
+    float: left;
+    height: 22px;
+    line-height: 22px
+}
+
+.data_list .wakeup_state .level {
+    float: left;
+    margin-left: 50px;
+    margin-right: 5px
+}
+
+.data_list .wakeup_state .added {
+    float: left;
+    color: #ca0000;
+    font-size: 14px
+}
+
+.data_list .level {
+    display: block;
+    width: 19px;
+    height: 25px
+}
+
+.data_list .level.level0 {
+    height: 23px;
+    background-repeat: no-repeat;
+    background-position: -589px -428px
+}
+
+.data_list .level.level1 {
+    width: 20px;
+    height: 22px;
+    background-repeat: no-repeat;
+    background-position: -625px -428px
+}
+
+.data_list .level.level2 {
+    width: 19px;
+    height: 22px;
+    background-repeat: no-repeat;
+    background-position: -645px -428px
+}
+
+.data_list .level.level3 {
+    background-repeat: no-repeat;
+    background-position: -515px -428px
+}
+
+.data_list .level.level4 {
+    width: 17px;
+    height: 22px;
+    background-repeat: no-repeat;
+    background-position: -608px -428px
+}
+
+.data_list .level.level5 {
+    width: 24px;
+    height: 28px;
+    background-repeat: no-repeat;
+    background-position: -421px -428px
+}
+
+.skill_bar {
+    margin-left: 365px
+}
+
+.skill_bar .skills {
+    margin-right: 105px;
+    float: left;
+    width: 410px
+}
+
+.skill_bar .wakeup_skills {
+    float: left
+}
+
+.skill_bar .skill_title {
+    line-height: 18px;
+    background: #f0eeeb;
+    float: left;
+    width: 15px;
+    height: 85px;
+    color: #333;
+    font-size: 16px;
+    padding: 10px 5px 0;
+    margin-right: 16px
+}
+
+.skill_bar ul {
+    float: left
+}
+
+.skill_bar li {
+    position: relative;
+    width: 80px;
+    height: 106px;
+    float: left;
+    margin-right: 10px
+}
+
+.skill_bar li.add_proto {
+    width: 239px;
+    line-height: 26px;
+    padding-top: 25px
+}
+
+.skill_bar li.add_txt {
+    width: 100px;
+    line-height: 26px;
+    padding-top: 25px
+}
+
+.skill_bar .skill_item {
+    width: 68px;
+    height: 68px;
+    display: block;
+    padding: 4px;
+    background: #fff;
+    border: 1px solid #dfdfdf;
+    border-radius: 100%
+}
+
+.skill_bar .skill_item:hover {
+    background: #fd4
+}
+
+.skill_bar .skill_item img {
+    width: 68px;
+    height: 68px
+}
+
+.skill_bar .skill_name {
+    color: #000;
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px
+}
+
+.skill_info {
+    z-index: 10;
+    position: absolute;
+    top: 83px;
+    left: 50%;
+    margin-left: -133px;
+    width: 244px;
+    padding: 0 20px 20px;
+    background: #dccead;
+    border: 1px solid #000;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+    opacity: 0;
+    display: none \9
+}
+
+.skill_info.show {
+    opacity: 1;
+    display: block \9
+}
+
+.skill_info .arrow {
+    position: absolute;
+    top: -11px;
+    left: 50%;
+    margin-left: -9px;
+    width: 18px;
+    height: 11px;
+    background-repeat: no-repeat;
+}
+
+.skill_info h3 {
+    line-height: 16px;
+    margin-top: 20px;
+    color: #000;
+    font-size: 14px
+}
+
+.skill_info p {
+    line-height: 20px;
+    color: #333;
+    font-size: 12px
+}
+
+.skill_info .arrow {
+    background-position: -841px -428px
+}

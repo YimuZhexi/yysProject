@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>式神录</title>
+    <link href="css/shishenlu.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/shishenlu.js"></script>
+
+</head>
+<body>
+
+<div id="main">
+    <!--首页链接需要填写-->
+    <a href="首页" target="_blank" class="logo"><span></span></a>
+    <!--左侧边框-->
+    <div class="container clearfix">
+        <div class="left_container tab_bar">
+            <div class="slogon"></div>
+            <!--搜索栏-->
+            <div class="search_part">
+                <em></em>
+                <input type="text" id="searchInput" class="keyword">
+                <a onclick="searchShiShen()" class="search_btn">搜索</a>
+            </div>
+        </div>
+        <div class="right_container">
+            <div class="shishen_container" tabindex="0" style="overflow: hidden; outline: none;">
+                <div id="shishen_wrap" class="shishen_wrap clearfix">
+                    <div class="shishen_item">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!--<div class="scroll_tips">
+            <p>滚动加载更多式神</p>
+            <em></em>
+        </div>-->
+
+    </div>
+
+
+</div>
+</body>
+</html>

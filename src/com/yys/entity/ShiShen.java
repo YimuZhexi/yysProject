@@ -5,8 +5,8 @@ package com.yys.entity;
  */
 public class ShiShen {
     private String shiShenName;
-    private byte[] jueXingQianIcon;
-    private byte[] jueXingHouIcon;
+    private String jueXingQianIcon;
+    private String jueXingHouIcon;
 
     public ShiShen() {
     }
@@ -16,7 +16,7 @@ public class ShiShen {
      * @param jueXingQianIcon 式神觉醒前图标
      * @param jueXingHouIcon  式神觉醒后图标
      */
-    public ShiShen(String shiShenName, byte[] jueXingQianIcon, byte[] jueXingHouIcon) {
+    public ShiShen(String shiShenName, String jueXingQianIcon, String jueXingHouIcon) {
         this.shiShenName = shiShenName;
         this.jueXingQianIcon = jueXingQianIcon;
         this.jueXingHouIcon = jueXingHouIcon;
@@ -39,28 +39,28 @@ public class ShiShen {
     /**
      * @return 式神觉醒前图标
      */
-    public byte[] getJueXingQianIcon() {
+    public String getJueXingQianIcon() {
         return jueXingQianIcon;
     }
 
     /**
      * @param jueXingQianIcon 式神觉醒前图标
      */
-    public void setJueXingQianIcon(byte[] jueXingQianIcon) {
+    public void setJueXingQianIcon(String jueXingQianIcon) {
         this.jueXingQianIcon = jueXingQianIcon;
     }
 
     /**
      * @return 式神觉醒后图标
      */
-    public byte[] getJueXingHouIcon() {
+    public String getJueXingHouIcon() {
         return jueXingHouIcon;
     }
 
     /**
      * @param jueXingHouIcon 式神觉醒后图标
      */
-    public void setJueXingHouIcon(byte[] jueXingHouIcon) {
+    public void setJueXingHouIcon(String jueXingHouIcon) {
         this.jueXingHouIcon = jueXingHouIcon;
     }
 }

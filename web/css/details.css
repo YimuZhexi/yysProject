@@ -1,0 +1,272 @@
+#main {
+    position: relative
+}
+
+html, body, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, p, blockquote, pre, hr, figure, table, caption, th, td, form, fieldset, legend, input, button, textarea, menu {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    padding: 0;
+    margin: 0
+}
+
+html, body, fieldset, img, iframe, abbr {
+    border: 0
+}
+
+li {
+    list-style: none
+}
+
+textarea {
+    overflow: auto;
+    resize: none
+}
+
+a, button {
+    cursor: pointer
+}
+
+h1, h2, h3, h4, h5, h6, em, strong, b {
+    font-weight: 700
+}
+
+a, a:hover {
+    text-decoration: none
+}
+
+html, body {
+    width: 100%;
+    font-family: 'Microsoft Yahei';
+    margin: 0 auto !important;
+    display: block !important
+}
+
+.main_banner {
+    position: relative;
+    width: 100%;
+    height: 694px;
+    background: url("/image/main_banner.png") center center no-repeat;
+    z-index: 10
+}
+
+.person_pic .image-con img {
+    width: 100%;
+    height: 100%
+}
+
+.banner_mask {
+    position: absolute;
+    width: 562px;
+    height: 100%;
+    background: url("/image/banner_mask.png") repeat;
+    left: 50%;
+    margin-left: -960px
+}
+
+.slogon {
+    position: absolute;
+    left: 50%;
+    margin-left: -600px;
+    top: 110px;
+    width: 173px;
+    height: 458px;
+    background-repeat: no-repeat;
+}
+
+.slogon {
+    background-position: 0 0
+}
+
+.person_part {
+    position: absolute;
+    width: 820px;
+    height: 100%;
+    left: 50%;
+    margin-left: -295px
+}
+
+.person_part .person_name {
+    position: absolute;
+    top: 165px;
+    left: 0;
+    width: 54px;
+    height: 297px;
+    z-index: 10;
+    background-repeat: no-repeat;
+}
+
+.person_part .video_btn {
+    position: absolute;
+    width: 80px;
+    height: 94px;
+    left: -12px;
+    top: -26px;
+    background-repeat: no-repeat;
+}
+
+.person_part .name_txt {
+    position: absolute;
+    font-size: 30px;
+    font-weight: 700;
+    color: #333;
+    line-height: 36px;
+    text-align: center;
+    width: 43px;
+    height: 158px;
+    top: 54px;
+    left: 5px
+}
+
+.person_part .name_txt.top17 {
+    top: 17px
+}
+
+.person_part .level {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 80px;
+    margin-left: -42px;
+    height: 50px
+}
+
+.person_part .level.SR {
+    background-repeat: no-repeat;
+}
+
+.person_part .level.SP {
+    background-repeat: no-repeat;
+}
+
+.person_part .level.SSR {
+    background-repeat: no-repeat;
+}
+
+.person_part .level.R {
+    background-repeat: no-repeat;
+}
+
+.person_part .level.N {
+    background-repeat: no-repeat;
+}
+
+.person_part .person_name {
+    background-position: -1078px -458px
+}
+
+.person_part .video_btn {
+    background-position: -1318px -458px
+}
+
+.person_part .level.N {
+    background-position: -1132px -703px
+}
+
+.person_part .level.SR {
+    background-position: -1212px -703px
+}
+
+.person_part .level.SP {
+    background-position: -1292px -703px
+}
+
+.person_part .level.SSR {
+    background-position: -1372px -703px
+}
+
+.person_part .level.R {
+    background-position: -1247px -885px
+}
+
+
+.banner_MaskLayer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    background: #000;
+    -webkit-transition: all .35s ease;
+    -moz-transition: all .35s ease;
+    -ms-transition: all .35s ease;
+    -o-transition: all .35s ease;
+    transition: all .35s ease;
+    visibility: hidden
+}
+
+.person-tab {
+    position: absolute;
+    left: 222px;
+    bottom: 103px;
+    width: 298px;
+    height: 60px;
+    background: url("/image/string_bg_1cc78ca.png") no-repeat 50% 50%;
+    z-index: 5
+}
+
+.person-tab .person-tab-btn1, .person-tab .person-tab-btn2, .person-tab .person-tab-btn3 {
+    width: 120px;
+    height: 124px;
+    position: absolute
+}
+
+.person-tab .person-tab-btn1 i, .person-tab .person-tab-btn2 i, .person-tab .person-tab-btn3 i {
+    position: absolute;
+    width: 48px;
+    height: 29px;
+    left: 36px;
+    top: -7px;
+    background: url("/image/btn-arrow_e200cb4.png") no-repeat center top;
+    display: none
+}
+
+.person-tab .person-tab-btn1.cur i, .person-tab .person-tab-btn2.cur i, .person-tab .person-tab-btn3.cur i {
+    display: block
+}
+
+.person-tab .person-tab-btn1 {
+    left: -50px;
+    top: -40px;
+    background: url("/image/chuchi-btn_0116701.png") no-repeat center 50%
+}
+
+.person-tab .person-tab-btn1.cur {
+    background: url("/image/chuchi-btn_h_ccfbe7c.png") no-repeat center 50%
+}
+
+.person-tab .person-tab-btn2 {
+    cursor: default;
+    right: -70px;
+    top: -40px;
+    background: url("/image/juexing-btn_7626745.png") no-repeat center 50%
+}
+
+.person-tab .person-tab-btn2.awake {
+    background: url("/image/juexing-h-btn_fe6e4cd.png") no-repeat center 50%;
+    cursor: pointer
+}
+
+.person-tab .person-tab-btn2.awake.cur {
+    background: url("/image/juexing-h-btn_h_43ad219.png") no-repeat center 50%
+}
+
+.banner_MaskLayer.show {
+    visibility: visible;
+    -webkit-opacity: .7;
+    -moz-opacity: .7;
+    opacity: .7;
+    filter: alpha(opacity=70);
+    z-index: 100
+}
+
+.slogon, .strategy_part, .zhuanji_container, .zhuanji_container02, .person_part .person_name, .zhuanji_container .btns a.cv_btn, .zhuanji_container02 .btns a.cv_btn, .zhuanji_container .btns a.to_Japanease, .zhuanji_container02 .btns a.to_Japanease, .person_pic .change_btns a span.h, .person_part .video_btn, .person_pic .change_btns, .picScroll_nav .next, .picScroll_nav .prev, .to_top, .com_title.title2, .com_title.title6, .com_title.title4, .com_title.title3, .com_title.title5, .com_title, .person_part .level.N, .person_part .level.SR, .person_part .level.SP, .person_part .level.SSR, .person_part .level.R, .close_btn, .person_pic .change_btns a.wakeup_skin:hover em, .person_pic .change_btns a.wakeup_skin em, .popLogin .login-close {
+    background-image: url("/image/page_detail.png")
+}

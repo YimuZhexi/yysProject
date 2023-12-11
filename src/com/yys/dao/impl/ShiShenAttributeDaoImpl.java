@@ -47,7 +47,7 @@ public class ShiShenAttributeDaoImpl implements IShiShenAttributeDao {
                 shiShen.setZhuangTai(resultSet.getString("zhuangTai"));
                 shiShen.setXiaoGuoDiKang(resultSet.getFloat("xiaoGuoDiKang"));
                 shiShen.setXiaoGuoMingZhong(resultSet.getFloat("xiaoGuoMingZhong"));
-                shiShen.setImage(resultSet.getBytes("image"));
+                shiShen.setImage(resultSet.getString("image"));
                 ret.add(shiShen);
             }
         } catch (Exception e) {
@@ -101,7 +101,7 @@ public class ShiShenAttributeDaoImpl implements IShiShenAttributeDao {
             preparedStatement.setString(8, shiShenAttribute.getZhuangTai());
             preparedStatement.setFloat(9, shiShenAttribute.getXiaoGuoDiKang());
             preparedStatement.setFloat(10, shiShenAttribute.getXiaoGuoMingZhong());
-            preparedStatement.setBytes(11, shiShenAttribute.getImage());
+            preparedStatement.setString(11, shiShenAttribute.getImage());
             if (preparedStatement.executeUpdate() > 0) {
                 flag = true;
             }
@@ -154,7 +154,7 @@ public class ShiShenAttributeDaoImpl implements IShiShenAttributeDao {
             preparedStatement.setFloat(8, shiShenAttribute.getXiaoGuoDiKang());
             preparedStatement.setFloat(9, shiShenAttribute.getXiaoGuoMingZhong());
             preparedStatement.setString(11, shiShenAttribute.getShiShenName());
-            preparedStatement.setBytes(10, shiShenAttribute.getImage());
+            preparedStatement.setString(10, shiShenAttribute.getImage());
             preparedStatement.setString(12, shiShenAttribute.getZhuangTai());
             if (preparedStatement.executeUpdate() > 0) {
                 flag = true;

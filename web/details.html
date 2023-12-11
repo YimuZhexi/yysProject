@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/details.css">
+    <link rel="stylesheet" type="text/css" href="css/section1.css">
+    <link rel="stylesheet" type="text/css" href="css/section2.css">
+    <script type="text/javascript" src="js/details_main_banner.js"></script>
+    <title>式神详情</title>
+</head>
+<body>
+<div id="main">
+    <div class="main_banner" id="main_banner">
+        <div class="banner_mask"></div>
+        <div class="slogon"></div>
+        <div class="person_part">
+            <div class="person_name">
+            <span class="name_txt">桃花妖
+            </span>
+                <span class="level SR"></span>
+            </div>
+            <!--在这了-->
+            <div class="person_pic">
+                <div class="person_pic-container" style="display: block;">
+                    <div class="image-con show" id="image-con-1">
+                        <!--TODO-->
+                        <img src="image/test/200.png">
+                    </div>
+                    <!--TODO-->
+                    <div class="image-con" id="image-con-2">
+                        <img src="./image/test/200(1).png">
+                    </div>
+                </div>
+            </div>
+            <div class="person-tab">
+                <a onclick="PersonTab(1)" id="person-tab-btn1" class="person-tab-btn1 cur">
+                    <i></i>
+                </a>
+                <a onclick="PersonTab(2) " id="person-tab-btn2" class="person-tab-btn2 awake">
+                    <i></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- TODO:数据请求与填充 -->
+    <div class="banner_MaskLayer"></div>
+
+    <div id="section1">
+        <div class="section_container">
+            <h3 class="com_title title1"></h3>
+            <div class="zhuanji_container clearfix">
+                <div class="zhuanji_txt">
+                    <h3><em class="flower"></em>
+                        <span>桃花妖</span>
+                        <a onclick="InitZhuanJi(1,this)" class="zj-btn cur" data-id="0">传记一</a>
+                        <a onclick="InitZhuanJi(2,this)" class="zj-btn" data-id="1">传记二</a>
+                        <a onclick="InitZhuanJi(3,this)" class="zj-btn" data-id="2">传记三</a>
+                    </h3>
+                    <div class="zhuanji_txt_container">
+                        <a class="to_left"> </a>
+                        <a class="to_right"> </a>
+                        <div class="zhuanji_txt_wrap abs" id="zhuanJi_txt" style="width: 477px;">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="section2">
+        <div class="section_container">
+            <h3 class="com_title title2"></h3>
+            <div class="qingbao_container">
+                <div class="data_title clearfix">
+                    <div class="before_title title">
+                        <h3>觉醒前</h3>
+                        <div class="pic_wrap">
+                            <img src="./image/test/200.jpg">
+                        </div>
+                    </div>
+
+                    <div class="after_title title">
+                        <h3>觉醒后</h3>
+                        <div class="pic_wrap">
+                            <img src="./image/test/200(2).jpg">
+                        </div>
+                    </div>
+
+                </div>
+                <ul class="data_list clearfix">
+                    <li>
+                        <div class="data_name clearfix"><em class="attack"></em><span>攻击</span></div>
+                        <div class="data_name clearfix"><em class="life"></em><span>生命</span></div>
+                        <div class="data_name clearfix"><em class="defence"></em><span>防御</span></div>
+                        <div class="data_name clearfix"><em class="speed"></em><span>速度</span></div>
+                        <div class="data_name clearfix"><em class="baoji"></em><span>暴击</span></div>
+                        <div class="data_name clearfix"><em class="baoshang"></em><span>暴击伤害</span></div>
+                        <div class="data_name clearfix"><em class="mingzhong"></em><span>效果命中</span></div>
+                        <div class="data_name clearfix"><em class="opposite"></em><span>效果抵抗</span></div>
+                    </li>
+                    <li class="normal_info">
+                        <div class="init_state"><span class="level level1"></span><span class="value">(102)</span></div>
+                        <div class="init_state"><span class="level level2"></span><span class="value">(960)</span></div>
+                        <div class="init_state"><span class="level level3"></span><span class="value">(75)</span></div>
+                        <div class="init_state"><span class="level level0"></span><span class="value">(90)</span></div>
+                        <div class="init_state"><span class="level level2"></span><span class="value">(5%)</span></div>
+                        <div class="init_state"><span class="level "></span><span class="value">(150%)</span></div>
+                        <div class="init_state"><span class="level "></span><span class="value">(0%)</span></div>
+                        <div class="init_state"><span class="level "></span><span class="value">(0%)</span></div>
+                    </li>
+                    <li class="awake_info">
+                        <div class="wakeup_state"><span class="level level1"></span><span
+                                class="value">(113)</span><span class="added">+11</span></div>
+                        <div class="wakeup_state"><span class="level level3"></span><span
+                                class="value">(1174)</span><span class="added">+213</span></div>
+                        <div class="wakeup_state"><span class="level level4"></span><span class="value">(83)</span><span
+                                class="added">+8</span></div>
+                        <div class="wakeup_state"><span class="level level2"></span><span
+                                class="value">(100)</span><span class="added">+10</span></div>
+                        <div class="wakeup_state"><span class="level level2"></span><span class="value">(5%)</span><span
+                                class="added">+0%</span></div>
+                        <div class="wakeup_state"><span class="level"></span><span class="value">(150%)</span><span
+                                class="added">+0%</span></div>
+                        <div class="wakeup_state"><span class="level"></span><span class="value">(0%)</span><span
+                                class="added">+0%</span></div>
+                        <div class="wakeup_state"><span class="level "></span><span class="value">(0%)</span><span
+                                class="added">+0%</span></div>
+                    </li>
+
+                </ul>
+                <div class="skill_bar clearfix">
+                    <div class="skills">
+                        <p class="skill_title">基本技能</p>
+                        <ul class="basic_skills">
+                            <li>
+                                <!--TODO-->
+                                <a onmouseenter="OnMouseIn(this)" onmouseleave="OnMouseOut(this)" class="skill_item">
+                                    <img src="./image/test/2001.png">
+                                </a>
+                                <p class="skill_name">花舞</p>
+                                <div class="skill_info"><em class="arrow"></em>
+                                    <h3>花舞</h3>
+                                    <p>舞动的花瓣结成花之印攻击敌方目标，造成攻击100%伤害。</p>
+                                    <p>Lv.2伤害增加至105%</p>
+                                    <p>Lv.3伤害增加至110%</p>
+                                    <p>Lv.4伤害增加至115%</p>
+                                    <p>Lv.5伤害增加至125%</p>
+                                </div>
+                            </li>
+                            <li><a onmouseenter="OnMouseIn(this)" onmouseleave="OnMouseOut(this)" class="skill_item">
+                                <img
+                                        src="./image/test/2002.png">
+                            </a>
+                                <p class="skill_name">花之馨息</p>
+                                <div class="skill_info"><em class="arrow"></em>
+                                    <h3>花之馨息</h3>
+                                    <p>治疗时，额外治疗其他友方等同于本次治疗量30%的生命，受到桃花妖治疗的目标获得盛开，持续1回合。
+                                        【施放】为友方目标治疗生命上限20%的生命。</p>
+                                    <p>Lv.2治疗增至21%</p>
+                                    <p>Lv.3治疗增至22%</p>
+                                    <p>Lv.4治疗增至23%</p>
+                                    <p>Lv.5治疗增至25%</p></div>
+                            </li>
+                            <li><a onmouseenter="OnMouseIn(this)" onmouseleave="OnMouseOut(this)" class="skill_item">
+                                <img
+                                        src="./image/test/2003.png">
+                            </a>
+                                <p class="skill_name">桃华灼灼</p>
+                                <div class="skill_info"><em class="arrow"></em>
+                                    <h3>桃华灼灼</h3>
+                                    <p>复活阵亡的友方目标，并为其治疗生命上限20%的生命。</p>
+                                    <p>Lv.2治疗增至21%</p>
+                                    <p>Lv.3治疗增至22%</p>
+                                    <p>Lv.4治疗增至23%</p>
+                                    <p>Lv.5治疗增至25%</p></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

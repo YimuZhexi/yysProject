@@ -1,0 +1,362 @@
+#section1 {
+    width: 100%;
+    padding: 70px 0;
+}
+
+.section_container {
+    width: 1200px;
+    position: relative;
+    margin: 0 auto
+}
+
+#section3 .section_container {
+    padding-top: 127px
+}
+
+#section6 .section_container {
+    height: 100%
+}
+
+.com_title {
+    position: absolute;
+    width: 192px;
+    height: 86px;
+    top: -8px;
+    left: 0;
+    background-repeat: no-repeat;
+}
+
+.com_title.title2 {
+    top: -25px;
+    width: 200px;
+    height: 90px;
+    background-repeat: no-repeat;
+}
+
+.com_title.title3 {
+    top: 0;
+    width: 282px;
+    height: 86px;
+    background-repeat: no-repeat;
+}
+
+.com_title.title4 {
+    top: 0;
+    width: 368px;
+    height: 86px;
+    background-repeat: no-repeat;
+}
+
+.com_title.title5 {
+    top: 0;
+    width: 319px;
+    height: 86px;
+    background-repeat: no-repeat;
+}
+
+.com_title.title6 {
+    top: 0;
+    width: 278px;
+    height: 86px;
+    background-repeat: no-repeat;
+}
+
+#section4 .com_title {
+    position: relative;
+    margin-bottom: 39px
+}
+
+#section5 .com_title {
+    position: relative;
+    margin-bottom: 40px
+}
+
+#section6 .com_title {
+    position: relative;
+    margin-bottom: 40px
+}
+
+.com_title.title2 {
+    background-position: -1078px -755px
+}
+
+.com_title.title6 {
+    background-position: 0px -885px
+}
+
+.com_title.title4 {
+    background-position: -278px -885px
+}
+
+.com_title.title3 {
+    background-position: -646px -885px
+}
+
+.com_title.title5 {
+    background-position: -928px -885px
+}
+
+.com_title {
+    background-position: -1278px -755px
+}
+
+.zhuanji_container, .zhuanji_container02 {
+    position: relative;
+    width: 1078px;
+    height: 427px;
+    margin-left: 114px;
+    background-repeat: no-repeat;
+}
+
+.zhuanji_container .btns, .zhuanji_container02 .btns {
+    position: absolute;
+    width: 122px;
+    height: 152px;
+    left: 250px;
+    top: 32px
+}
+
+.zhuanji_container .btns a, .zhuanji_container02 .btns a {
+    float: left;
+    width: 47px;
+    height: 151px
+}
+
+.zhuanji_container .btns a span, .zhuanji_container02 .btns a span {
+    display: block;
+    width: 13px;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 14px
+}
+
+.zhuanji_container .btns a span.Japan, .zhuanji_container02 .btns a span.Japan {
+    line-height: 16px;
+    padding-top: 30px
+}
+
+.zhuanji_container .btns a span.name, .zhuanji_container02 .btns a span.name {
+    line-height: 14px;
+    max-height: 75px;
+    overflow: hidden
+}
+
+.zhuanji_container .btns a span.cv, .zhuanji_container02 .btns a span.cv {
+    width: 19px;
+    padding-top: 16px
+}
+
+.zhuanji_container .btns a.to_Japanease, .zhuanji_container02 .btns a.to_Japanease {
+    margin-right: 28px;
+    background-repeat: no-repeat;
+}
+
+.zhuanji_container .btns a.cv_btn, .zhuanji_container02 .btns a.cv_btn {
+    background-repeat: no-repeat;
+}
+
+.zhuanji_container .btns a.cv_btn.hidemusic, .zhuanji_container02 .btns a.cv_btn.hidemusic {
+    pointer-events: none
+}
+/*
+.zhuanji_container .btns a.cv_btn.cv_btn1, .zhuanji_container02 .btns a.cv_btn.cv_btn1 {
+    width: 73px;
+    background: url("/image/blue_btn1_8807c7f.png") 0 0 no-repeat !important
+}*/
+
+.zhuanji_container .btns a.cv_btn.cv_btn1 i, .zhuanji_container02 .btns a.cv_btn.cv_btn1 i {
+    margin: 81px auto 0
+}
+
+/*.zhuanji_container .btns a.cv_btn.cv_btn2, .zhuanji_container02 .btns a.cv_btn.cv_btn2 {
+    width: 73px;
+    height: 244px !important;
+    background: url("/image/blue_btn2_0370560.png") 0 0 no-repeat !important
+}*/
+
+.zhuanji_container .btns a.cv_btn.cv_btn2 i, .zhuanji_container02 .btns a.cv_btn.cv_btn2 i {
+    margin: 173px auto 0 !important
+}
+
+/*.zhuanji_container .btns a.cv_btn.cv_btn3, .zhuanji_container02 .btns a.cv_btn.cv_btn3 {
+    width: 73px;
+    background: url("/image/blue_btn3_5479b81.png") 0 0 no-repeat !important
+}*/
+
+.zhuanji_container .btns a.cv_btn.cv_btn3 i, .zhuanji_container02 .btns a.cv_btn.cv_btn3 i {
+    margin: 81px auto 0 !important
+}
+
+.zhuanji_container .btns a.cv_btn i, .zhuanji_container02 .btns a.cv_btn i {
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin: 5px auto;
+    background-repeat: no-repeat;
+}
+
+.zhuanji_container .btns a.cv_btn.pause i, .zhuanji_container02 .btns a.cv_btn.pause i {
+    background-repeat: no-repeat;
+}
+
+.zhuanji_container .btns {
+    height: 200px !important
+}
+
+/*.zhuanji_container .btns a {
+    padding-bottom: 58px !important;
+    background-image: none !important;
+    background: url("/image/blue_btn_8288077.png") no-repeat center !important;
+    background-size: 100% 100% !important
+}*/
+
+.zhuanji_container .btns a span.name {
+    max-height: 126px !important;
+    word-wrap: break-word;
+    text-align: center
+}
+
+.zhuanji_container, .zhuanji_container02 {
+    background-position: 0px -458px
+}
+
+.zhuanji_container .btns a.cv_btn, .zhuanji_container02 .btns a.cv_btn {
+    background-position: -1132px -458px
+}
+
+.zhuanji_container .btns a.to_Japanease, .zhuanji_container02 .btns a.to_Japanease {
+    background-position: -1179px -458px
+}
+
+.zhuanji_container .btns a.cv_btn.pause i, .zhuanji_container02 .btns a.cv_btn.pause i {
+    background-position: -490px -428px
+}
+
+.zhuanji_container .btns a.cv_btn i, .zhuanji_container02 .btns a.cv_btn i {
+    background-position: -534px -428px
+}
+
+.zhuanji_txt {
+    float: right
+}
+
+.zhuanji_txt h3 {
+    float: right;
+    width: 86px;
+    height: 369px;
+    border-left: 1px solid #000;
+    margin-top: 33px;
+    overflow-y: auto;
+    margin-right: 11px
+}
+
+.zhuanji_txt h3 .flower {
+    display: block;
+    width: 45px;
+    height: 27px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background-repeat: no-repeat;
+}
+
+.zhuanji_txt h3 span {
+    display: block;
+    width: 18px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #bb391c;
+    line-height: 16px;
+    margin-bottom: 30px
+}
+
+.zhuanji_txt h3 .zj-btn {
+    display: block;
+    width: 18px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #bb391c;
+    line-height: 16px;
+    text-align: center;
+    color: #000;
+    margin-top: 15px;
+    font-weight: 400
+}
+
+.zhuanji_txt h3 .zj-btn:hover, .zhuanji_txt h3 .zj-btn.cur {
+    color: #74a2bd;
+    font-weight: 700
+}
+
+.zhuanji_txt p {
+    float: right;
+    width: 52px;
+    height: 368px;
+    margin-top: 30px;
+    border-left: 1px dashed #d7d7d7;
+    display: none
+}
+
+.zhuanji_txt p span {
+    display: block;
+    width: 15px;
+    word-wrap: break-word;
+    color: #2e2114;
+    font-size: 14px;
+    margin: 0 auto;
+    line-height: 14px
+}
+
+.zhuanji_txt p.show {
+    display: block
+}
+
+.zhuanji_txt h3 .flower {
+    background-position: -445px -428px
+}
+
+.zhuanji_txt_container {
+    float: right;
+    width: 577px;
+    height: 405px;
+    position: relative;
+    overflow: hidden;
+    overflow-x: auto
+}
+
+/*.zhuanji_txt_container .to_left, .zhuanji_txt_container .to_right {
+    width: 50%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    display: block;
+    background: url(about:blank);
+    outline: 0
+}*/
+
+.zhuanji_txt_container .to_left {
+    left: 0;
+    z-index: 5
+}
+
+.zhuanji_txt_container .to_right {
+    right: 0;
+    z-index: 6
+}
+
+.zhuanji_txt_wrap {
+    -webkit-transition: all .1s linear;
+    -moz-transition: all .1s linear;
+    -ms-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    transition: all .1s linear;
+    top: 0;
+    right: 0
+}
+
+.zhuanji_txt_wrap.abs {
+    position: absolute
+}
+
+.person_pic .change_btns a.start_skin em, .person_pic .change_btns a.start_skin:hover em, .data_list .level.level5, .zhuanji_txt h3 .flower, .zhuanji_container .btns a.cv_btn.pause i, .zhuanji_container02 .btns a.cv_btn.pause i, .data_list .level.level3, .zhuanji_container .btns a.cv_btn i, .zhuanji_container02 .btns a.cv_btn i, #top_bar.hover .topnav_list .topnav_li .line, #top_bar.fixed .topnav_list .topnav_li .line, #top_bar .topnav_list .topnav_li .line, .data_list .level.level0, .data_list .level.level4, .data_list .level.level1, .data_list .level.level2, .data_list .data_name em.defence, .data_list .data_name em.life, .data_list .data_name em, .data_list .data_name em.opposite, .data_list .data_name em.speed, .data_list .data_name em.mingzhong, .data_list .data_name em.attack, .strategy_container .pagination a.next_btn em, .strategy_container .pagination a em, .skill_info .arrow, .cmt_comments .cmt_comment_box #comment_icon, .homepage_btn .icon i, #nav li .icon i {
+    background-image: url("/image/page_detail.png")
+}

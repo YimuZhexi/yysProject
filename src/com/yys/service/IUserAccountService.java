@@ -12,7 +12,7 @@ public interface IUserAccountService {
      * @param userAccount 要插入的用户账户对象
      * @return 如果插入成功返回true，否则返回false
      */
-    public boolean InsertUserAccount(UserAccount userAccount);
+    String InsertUserAccount(UserAccount userAccount);
 
     /**
      * 删除用户账户
@@ -20,7 +20,7 @@ public interface IUserAccountService {
      * @param userName 要删除的用户账户的用户名
      * @return 如果删除成功返回true，否则返回false
      */
-    public boolean DeleteUserAccount(String userName);
+    boolean DeleteUserAccount(String userName);
 
     /**
      * 登录
@@ -29,6 +29,6 @@ public interface IUserAccountService {
      * @param password 账户的密码
      * @return 密码账户匹配则返回true，否则返回false
      */
-    public boolean LoginAccount(String userName, String password);
+    boolean LoginAccount(String userName, String password);
 }
 

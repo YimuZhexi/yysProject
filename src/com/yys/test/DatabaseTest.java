@@ -2,6 +2,8 @@ package com.yys.test;
 
 import com.yys.dao.impl.*;
 import com.yys.entity.*;
+import com.yys.factory.ServiceFactory;
+import com.yys.service.IShiShenService;
 
 import java.io.*;
 import java.util.Base64;
@@ -55,5 +57,11 @@ public class DatabaseTest {
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //        }
+        IShiShenService shiShenService = ServiceFactory.getShiShenService();
+        shiShenService.AddShiShen(new ShiShen(
+                "彼岸花",
+                "/YYS/image/shiShen/icon/彼岸花觉醒前.png",
+                "/YYS/image/shiShen/img/彼岸花觉醒后.png"
+        ));
     }
 }

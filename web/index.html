@@ -3,26 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>登陆界面</title>
-    <link rel="stylesheet" href="css/login.css" type="text/css">
+    <link href="css/login.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="js/login.js"></script>
 </head>
 <body>
-<div class="background"></div>
-<div>
-    <div class="header"></div>
-    <div class="text">
-        123456
-    </div>
+<div class="background">
     <div class="container">
         <h2>登陆</h2>
-        <form>
+        <form name="loginForm">
             <label>
                 <input type="text" id="username" name="username" placeholder="用户名" required>
                 <input type="password" id="password" name="password" placeholder="密码" required>
                 <input type="button" value="登录" onclick="login()">
             </label>
+
         </form>
+        <!--底层窗口-->
+        <div id="popLayer">
+            <button onclick="popDiv()">注册</button>
+
+        </div>
+        <!--弹窗-->
+        <div id="popDiv">
+            <div class="close">
+                <a onclick="closePop()">关闭</a>
+            </div>
+            <p>注册窗口</p>
+            <!--注册窗口的界面-->
+            <form name="registerForm">
+                <label>
+                    <input type="text" id="registerName" name="registerName" placeholder="用户名" required>
+                    <input type="password" id="registerPassword" name="registerPassword" placeholder="密码" required>
+                    <input type="text" id="registerEmail" name="registerEmail" placeholder="邮箱" required>
+                    <input type="button" onclick="register()" value="注册">
+                </label>
+
+            </form>
+
+        </div>
+
     </div>
+
 </div>
 </body>
 </html>
