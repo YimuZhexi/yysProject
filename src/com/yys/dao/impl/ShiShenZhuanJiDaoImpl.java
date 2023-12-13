@@ -64,6 +64,9 @@ public class ShiShenZhuanJiDaoImpl implements IShiShenZhuanJiDao {
         boolean flag = false;
         PreparedStatement ps = null;
         String sql = "insert into shishenzhuanji values(?,?,?,?)";
+        String replace = "update shishenzhuanji set zhuanJi1 = replace(zhuanJi1,'「','﹁')" +
+                "and zhuanJi2 = replace(zhuanJi2,'「','﹁')" +
+                "and zhuanJi3 = replace(zhuanJi3,'「','﹁')";
         try {
             ps = connection.prepareStatement(sql);
             ps.setString(1, shiShenZhuanJi.getShiShenName());
@@ -73,6 +76,8 @@ public class ShiShenZhuanJiDaoImpl implements IShiShenZhuanJiDao {
             if (ps.executeUpdate() > 0) {
                 flag = true;
             }
+            ps = connection.prepareStatement(replace);
+            ps.execute();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

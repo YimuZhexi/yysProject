@@ -34,7 +34,7 @@ function Initshishenitem(name, i) {
     p.setAttribute("class", "shishen_item");
 
     let c1 = document.createElement("a");
-    c1.setAttribute("href", "式神详情页面");
+    c1.setAttribute("href", `/details.html?shiShenName=${name}`);
 
     let c2 = document.createElement("span");
     c2.setAttribute("class", "pic_wrap");
