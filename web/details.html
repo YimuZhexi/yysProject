@@ -5,7 +5,15 @@
     <link rel="stylesheet" type="text/css" href="css/details.css">
     <link rel="stylesheet" type="text/css" href="css/section1.css">
     <link rel="stylesheet" type="text/css" href="css/section2.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
     <script type="text/javascript" src="js/details_main_banner.js"></script>
+    <script>
+        let caozuo = "";
+
+        function setCaozuo(s) {
+            caozuo = s;
+        }
+    </script>
     <title>式神详情</title>
 </head>
 <body>
@@ -100,22 +108,6 @@
                     <li id="normal_attribute" class="normal_info">
                     </li>
                     <li id="wake_attribute" class="awake_info">
-                        <!--<div class="wakeup_state"><span class="level "></span><span
-                                class="value">(113)</span><span class="">+11</span></div>
-                        <div class="wakeup_state"><span class="level "></span><span
-                                class="value">(1174)</span><span class="added">+213</span></div>
-                        <div class="wakeup_state"><span class="level "></span><span class="value">(83)</span><span
-                                class="added">+8</span></div>
-                        <div class="wakeup_state"><span class="level "></span><span
-                                class="value">(100)</span><span class="added">+10</span></div>
-                        <div class="wakeup_state"><span class="level "></span><span class="value">(5%)</span><span
-                                class="added">+0%</span></div>
-                        <div class="wakeup_state"><span class="level"></span><span class="value">(150%)</span><span
-                                class="added">+0%</span></div>
-                        <div class="wakeup_state"><span class="level"></span><span class="value">(0%)</span><span
-                                class="added">+0%</span></div>
-                        <div class="wakeup_state"><span class="level "></span><span class="value">(0%)</span><span
-                                class="added">+0%</span></div>-->
                     </li>
 
                 </ul>
@@ -128,42 +120,23 @@
                                 <a onmouseenter="OnMouseIn(this)" onmouseleave="OnMouseOut(this)" class="skill_item">
                                     <img id="skill1_icon" src="">
                                 </a>
-                                <p id="skill1_name" class="skill_name"><!--花舞--></p>
+                                <p id="skill1_name" class="skill_name"></p>
                                 <div id="skill1_info" class="skill_info"><em class="arrow"></em>
-                                    <!--<h3>花舞</h3>
-                                    <p>舞动的花瓣结成花之印攻击敌方目标，造成攻击100%伤害。</p>
-                                    <p>Lv.2伤害增加至105%</p>
-                                    <p>Lv.3伤害增加至110%</p>
-                                    <p>Lv.4伤害增加至115%</p>
-                                    <p>Lv.5伤害增加至125%</p>-->
                                 </div>
                             </li>
                             <li>
                                 <a onmouseenter="OnMouseIn(this)" onmouseleave="OnMouseOut(this)" class="skill_item">
                                     <img id="skill2_icon" src="">
                                 </a>
-                                <p id="skill2_name" class="skill_name"><!--花之馨息--></p>
+                                <p id="skill2_name" class="skill_name"></p>
                                 <div id="skill2_info" class="skill_info"><em class="arrow"></em>
-                                    <!--<h3>花之馨息</h3>
-                                    <p>治疗时，额外治疗其他友方等同于本次治疗量30%的生命，受到桃花妖治疗的目标获得盛开，持续1回合。
-                                        【施放】为友方目标治疗生命上限20%的生命。</p>
-                                    <p>Lv.2治疗增至21%</p>
-                                    <p>Lv.3治疗增至22%</p>
-                                    <p>Lv.4治疗增至23%</p>
-                                    <p>Lv.5治疗增至25%</p>-->
                                 </div>
                             </li>
                             <li><a onmouseenter="OnMouseIn(this)" onmouseleave="OnMouseOut(this)" class="skill_item">
                                 <img id="skill3_icon" src="">
                             </a>
-                                <p id="skill3_name" class="skill_name"><!--桃华灼灼--></p>
+                                <p id="skill3_name" class="skill_name"></p>
                                 <div id="skill3_info" class="skill_info"><em class="arrow"></em>
-                                    <!--<h3>桃华灼灼</h3>
-                                    <p>复活阵亡的友方目标，并为其治疗生命上限20%的生命。</p>
-                                    <p>Lv.2治疗增至21%</p>
-                                    <p>Lv.3治疗增至22%</p>
-                                    <p>Lv.4治疗增至23%</p>
-                                    <p>Lv.5治疗增至25%</p>-->
                                 </div>
                             </li>
                         </ul>
@@ -180,7 +153,7 @@
         <div id="bb">
 
             <div class="administor">
-                <div>用户：616244838</div>
+                <div>用户：user</div>
             </div>
 
             <!--增加式神按钮-->
@@ -234,19 +207,38 @@
                                    placeholder="效果抵抗" required>
                         </label>
                     </form>
+                    <form onsubmit="handleSubmit(event)">
+                        <div>请按照“头像觉醒前” "头像觉醒后" "觉醒前" "觉醒后" "技能1" "技能2" "技能3"顺序上传图片</div>
+                        <br>
+                        <!--图片提交-->
+                        <input type="file" oninput="loadImg('jueXingQianIcon','image1')" id="jueXingQianIcon"
+                               value="头像觉醒前" accept="image/*">
+                        <div id="image1"></div>
+                        <input type="file" oninput="loadImg('jueXingHouIcon','image2')" id="jueXingHouIcon"
+                               value="头像觉醒后" accept="image/*">
+                        <div id="image2"></div>
+                        <input type="file" oninput="loadImg('jueXingQianImage','image3')" id="jueXingQianImage"
+                               value="觉醒前" accept="image/*">
+                        <div id="image3"></div>
+                        <input type="file" oninput="loadImg('jueXingHOUImage','image4')" id="jueXingHOUImage"
+                               value="觉醒后" accept="image/*">
+                        <div id="image4"></div>
+                        <input type="file" oninput="loadImg('skillIcon1','image5')" id="skillIcon1" value="技能1"
+                               accept="image/*">
+                        <div id="image5"></div>
+                        <input type="file" oninput="loadImg('skillIcon2','image6')" id="skillIcon2" value="技能2"
+                               accept="image/*">
+                        <div id="image6"></div>
+                        <input type="file" oninput="loadImg('skillIcon3','image7')" id="skillIcon3" value="技能3"
+                               accept="image/*">
+                        <div id="image7"></div>
+                    </form>
                     <br>
-                    <button class="windows" onclick=" ">提交信息</button>
+                    <input type="button" class="windows" onclick="SubmitData(caozuo)" value="提交信息">
                 </div>
             </div>
-            <!--底层窗口-->
-            <!--<div class="column-header clearfix" id="popLayer">
-                <input type="button" value="增加式神" onclick="popDiv()">
-            </div>-->
-            <!--
-                    TODO第二个按钮调取同一窗口,但是该窗口需要获取该页面信息，即更改
-            -->
             <div class="scroll_tips clearfix">
-                <input type="button" value="更改信息" onclick="popDiv(1)">
+                <input type="button" value="更改信息" onclick="popDiv(1);setCaozuo('update')">
             </div>
             <div>
                 <input type="button" value="删除式神" onclick="deleteShiShen()">
@@ -256,4 +248,22 @@
     </div>
 </header>
 </body>
+<script>
+    function loadImg(id1, id2) {
+        const getUserPhoto = document.getElementById(id1);
+        getUserPhoto.onchange = function () {
+            const file = this.files;
+            console.log(file);
+            const reader = new FileReader();
+            reader.readAsDataURL(file[0]);
+            reader.onload = function () {
+                const image = document.createElement("img");
+                image.style.height = "40px";
+                image.src = reader.result;
+                const showPicture = document.getElementById(id2);
+                showPicture.append(image);
+            };
+        };
+    }
+</script>
 </html>

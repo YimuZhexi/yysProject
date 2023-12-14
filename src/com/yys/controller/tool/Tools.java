@@ -3,13 +3,13 @@ package com.yys.controller.tool;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 
+import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.awt.image.BufferedImage;
+import java.io.*;
+import java.util.Base64;
 
-public class GetJson {
+public class Tools {
     public static JSONObject Get(HttpServletRequest request) throws IOException {
         // 创建一个StringBuilder对象用于存储读取到的内容
         StringBuilder sb = new StringBuilder();
@@ -28,4 +28,27 @@ public class GetJson {
         }
         return JSON.parseObject(sb.toString());
     }
+
+    /**
+     * 将json字符串转换为图片
+     *
+     * @param jsonImageData json字符串
+     * @param path          保存路径
+     */
+    public static void convertBase64ToImage(String jsonImageData, String path) {
+        try {
+            // 将base64字符串转换为图片
+            byte[] imageBytes = Base64.getDecoder().decode(jsonImageData);
+            BufferedImage image = ImageIO.read(new ByteArrayInputStream(imageBytes));
+
+            // 保存图片到指定路径
+            File outputFile = new File(path);
+
+            ImageIO.write(image, "png", outputFile);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 }

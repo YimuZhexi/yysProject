@@ -321,6 +321,12 @@ function getData() {
     newJueXingHou.baoJiShangHai = document.getElementById("xiugai_juexinghou_baoJiShangHai").value;
     newJueXingHou.xiaoGuoMingZhong = document.getElementById("xiugai_juexinghou_xiaoGuoMingZhong").value;
     newJueXingHou.xiaoGuoDiKang = document.getElementById("xiugai_juexinghou_xiaoGuoDiKang").value;
+    return {
+        "newShiShen": newShiShen,
+        "newZhuanJi": newZhuanJi,
+        "newJueXingQian": newJueXingQian,
+        "newJueXingHou": newJueXingHou
+    }
 }
 
 function deleteShiShen() {
@@ -350,3 +356,9 @@ function getCookie(cookieName) {
     return "";
 }
 
+function SubmitData(caozuo) {
+    if (caozuo === "update") {
+        let json = getData();
+        SendMsg("update", json);
+    }
+}
